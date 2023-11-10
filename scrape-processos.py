@@ -15,7 +15,7 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 
 driver = webdriver.Chrome(options=chrome_options)
-driver.get("http://www.sei.ufg.br")
+driver.get("http://www.sei.ufcat.edu.br")
 #link_sei = input("Link do SEI que deseja acessar: ")
 #driver.get(link_sei)
 
