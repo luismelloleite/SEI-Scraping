@@ -24,7 +24,7 @@ opcoes_chrome.add_experimental_option("prefs", {
 })
 
 driver = webdriver.Chrome(options=opcoes_chrome)
-driver.get("http://www.sei.ufg.br")
+driver.get("http://www.sei.ufcat.edu.br")
 
 campo_usuario = driver.find_element(By.ID, "txtUsuario")
 campo_senha = driver.find_element(By.ID, "pwdSenha")
