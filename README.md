@@ -7,4 +7,4 @@
 
 ## Planos pro futuro
 
-As funcionalidades serão expandidas no futuro, em geral nas configurações do sistema (criação de formulários e documentos)
+As funcionalidades serão expandidas no futuro.
