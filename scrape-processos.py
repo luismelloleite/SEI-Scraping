@@ -4,26 +4,21 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
-
-import chromedriver_autoinstaller
+from webdriver_manager.chrome import ChromeDriverManager
 
 import time
-
-chromedriver_autoinstaller.install()
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 
-driver = webdriver.Chrome(options=chrome_options)
-driver.get("http://www.sei.ufcat.edu.br")
-#link_sei = input("Link do SEI que deseja acessar: ")
-#driver.get(link_sei)
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+#driver.get("http://www.sei.ufcat.edu.br")
+driver.get("") # Adicione aqui o link do SEI! desejado.
+
 
 campo_usuario = driver.find_element(By.ID, 'txtUsuario')
 campo_senha = driver.find_element(By.ID, 'pwdSenha')
 
-#usuario = input(Nome de usuário: )
-#senha = input(Digite de senha: )
 usuario = ''
 senha = ''
 campo_usuario.send_keys(usuario)
@@ -42,7 +37,6 @@ opcao_pesquisar_processos.click()
 campo_unidade_geradora = driver.find_element(By.CSS_SELECTOR, "input#txtUnidade")
 campo_unidade_geradora.click()
 
-#nome_unidade_geradora = input("Nome da Unidade Geradora: ")
 nome_unidade_geradora = "CDIRH-RC"
 for char in nome_unidade_geradora:
     campo_unidade_geradora.send_keys(char)
@@ -51,12 +45,9 @@ campo_unidade_geradora.send_keys(Keys.ARROW_DOWN)
 campo_unidade_geradora.send_keys(Keys.ENTER)
 campo_unidade_geradora.send_keys(Keys.TAB)
 
-# Pesquisa Unidade Geradora
-
 botao_pesquisar = driver.find_element(By.ID, 'sbmPesquisar')
 botao_pesquisar.click()
 
-#SALVA OS PROCESSOS EM CSV
 driver.implicitly_wait(5)
 
 while True:
