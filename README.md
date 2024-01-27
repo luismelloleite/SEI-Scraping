@@ -11,7 +11,7 @@ Automatiza a pesquisa de processos no SEI!, extraindo informações relevantes e
 ### Como Usar
 
 1. **Configurar o Selenium WebDriver e Acessar o SEI!**
-   - Instale as bibliotecas: csv, selenium, webdriver_manager.
+   - Instale as bibliotecas: selenium, webdriver_manager.
      ```bash
      pip install csv selenium webdriver_manager
      ```
@@ -35,7 +35,7 @@ Automatiza o download de documentos associados aos processos do SEI!, com base e
 ### Como Usar
 
 1. **Configurar o Selenium WebDriver e Acessar o SEI!**
-   - Instale as bibliotecas: csv, selenium, webdriver_manager.
+   - Instale as bibliotecas: selenium, webdriver_manager.
      ```bash
      pip install csv selenium webdriver_manager
      ```
