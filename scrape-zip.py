@@ -6,9 +6,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 import csv
 import os
-import chromedriver_autoinstaller
+from webdriver_manager.chrome import ChromeDriverManager
 
-chromedriver_autoinstaller.install()
+# Automatic installation of ChromeDriver using webdriver_manager
+webdriver.Chrome(ChromeDriverManager().install())
+
 diretorio_projeto = os.getcwd()
 
 nome_pasta = input("Digite o nome da pasta para os downloads: ")
@@ -61,7 +63,6 @@ with open(nome_pasta + '_processo.csv', 'r') as arquivo:
         elementos = campo_arvore_acoes.find_elements(By.XPATH, "*")
         for elemento in elementos:
             outer_html = elemento.get_attribute("outerHTML")
-            #if 'href' in outer_html and 'zip' in outer_html:
             if 'procedimento_gerar_zip' in outer_html:
                 elemento.click()
                 btn_gerar = WebDriverWait(driver, 30).until(
