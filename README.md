@@ -52,6 +52,3 @@ Automatiza o download de documentos associados aos processos do SEI!, com base e
 Certifique-se de ter as bibliotecas Python necessárias instaladas antes de executar os scripts. Além disso, configure os scripts com o link SEI! específico e credenciais antes da execução.
 
 ---
-
-**Contato:**
-Para mais informações ou suporte, entre em contato com via e-mail: luis.mello@ufcat.edu.br
